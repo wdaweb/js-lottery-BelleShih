@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const random = (min, max) => {
+             
+            let numbers = []
+             for(let i=1;i<=6;i++) {                 
+                let j = Math.round( Math.random() * ( max - min ) + min)
+                 if( numbers.includes(j) === true ) {
+                    i--
+                } else {
+                    numbers.push(j)
+                }    
+        }   document.write(numbers)
+           
+      }  
+
+      const randomB = (min, max) => {
+          let a = Math.round( Math.random() * ( max - min)) + min 
+          return a
+           
+      }
+
+      document.write("A區號碼:") 
+      random(1, 38)
+      document.write("<br>")
+      document.write(`B區號碼:${randomB(1, 8)}`)  
+
+      
+                 
+        
+    </script>   
+</body>
+</html>
